@@ -32,7 +32,7 @@ void config_load_default(sysconfig_p config)
     IP4_ADDR(&config->ip_addr, 192, 168, 240, 1);
     IP4_ADDR(&config->ip_addr_peer, 192, 168, 240, 2);
     config->clock_speed			= 160;
-    config->bit_rate                    = 115200;
+    config->bit_rate                    = 9600;
 }
 
 int config_load(sysconfig_p config)

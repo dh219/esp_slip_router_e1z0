@@ -863,7 +863,7 @@ char int_no = 2;
     // Initialize software uart
     Softuart_SetPinRx(&softuart,14);	
     Softuart_SetPinTx(&softuart,12);
-    Softuart_Init(&softuart,19200);
+    Softuart_Init(&softuart,9600);
 
     // os_printf to softuart
     os_install_putc1(softuart_write_char);
