@@ -126,11 +126,9 @@ Then download this source tree in a separate directory and adjust the BUILD_AREA
 
 The source tree includes a binary version of the liblwip_open plus the required additional includes from my fork of esp-open-lwip. *No additional install action is required for that.* Only if you don't want to use the precompiled library, checkout the sources from https://github.com/martin-ger/esp-open-lwip . Use it to replace the directory "esp-open-lwip" in the esp-open-sdk tree. "make clean" in the esp_open_lwip dir and once again a "make" in the upper esp_open_sdk directory. This will compile a liblwip_open.a that contains the NAT-features. Replace liblwip_open_napt.a with that binary.
 
-If you want to use the precompiled binaries you can flash them with "esptool.py --port /dev/ttyUSB0 write_flash -fs 32m 0x00000 firmware/0x00000.bin 0x10000 firmware/0x10000.bin" (use -fs 8m for an ESP-01). 
-
-For Wemos D1 Mini use the following flash command:
+If you want to use the precompiled binaries you can flash them with
 ```
-esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash -fs 4m -fm dio 0x00000 firmware/0x00000.bin 0x10000 firmware/0x10000.bin 
+esptool.py --port /dev/cu.usbserial-0001 write_flash -fs detect 0x00000 firmware/0x00000.bin 0x10000 firmware/0x10000.bin
 ```
 
 # Softuart UART
