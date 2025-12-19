@@ -128,7 +128,8 @@ The source tree includes a binary version of the liblwip_open plus the required 
 
 If you want to use the precompiled binaries you can flash them with
 ```
-esptool.py --port /dev/cu.usbserial-0001 write_flash -fs detect 0x00000 firmware/0x00000.bin 0x10000 firmware/0x10000.bin
+esptool.py --port <YOUR_PORT> erase_flash
+esptool.py --port <YOUR_PORT> write_flash -fs detect 0x00000 firmware/0x00000.bin 0x10000 firmware/0x10000.bin
 ```
 
 # Softuart UART
